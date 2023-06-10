@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "938446667978",
+    "project_id": "gestorefectivo-becfb",
+    "storage_bucket": "gestorefectivo-becfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938446667978:android:bd9fc3978e127f60907433",
+        "android_client_info": {
+          "package_name": "com.example.gestorefectivo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938446667978-t8ehss7psb6bvgji3erijuj0m8j834ig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gestorefectivo",
+            "certificate_hash": "ef5c9f86ebbe2c79bb2bcf764f7949e6dd5b39de"
+          }
+        },
+        {
+          "client_id": "938446667978-4f9cl7vtr56k2ignblrf9n2te795vcel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg8aH7fvoCev0j9AbDq9cA1V1cX_0SlL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938446667978-4f9cl7vtr56k2ignblrf9n2te795vcel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
