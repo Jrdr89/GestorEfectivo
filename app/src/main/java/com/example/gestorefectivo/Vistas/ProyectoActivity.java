@@ -1,6 +1,8 @@
 package com.example.gestorefectivo.Vistas;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,7 +26,9 @@ public class ProyectoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proyecto);
 
+        ImageButton mostrarDepartamentos = findViewById(R.id.mostrarDep);
 
+        mostrarDepartamentos.setVisibility(View.INVISIBLE);
 
         // Inicializar la lista de proyectos (actualmente vacía)
         proyectos = new ArrayList<>();

@@ -13,9 +13,14 @@
         android:theme="@style/Theme.GestorEfectivo"
         tools:targetApi="31">
         <activity
-            android:name=".DepartamentoActivity"
+            android:name=".Vistas.FormularioActivity"
             android:exported="false" />
-        <!-- Nueva actividad principal: ProyectoActivity -->
+        <activity
+            android:name=".Vistas.RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Vistas.DepartamentoActivity"
+            android:exported="false" /> <!-- Nueva actividad principal: ProyectoActivity -->
         <activity
             android:name=".Vistas.ProyectoActivity"
             android:exported="true">

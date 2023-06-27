@@ -1,6 +1,7 @@
 package com.example.gestorefectivo.VistaModelo.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gestorefectivo.Entidades.Proyecto;
 import com.example.gestorefectivo.R;
+import com.example.gestorefectivo.Vistas.DepartamentoActivity;
 
 import java.util.List;
 
@@ -37,8 +39,23 @@ public class ProyectoAdapter extends RecyclerView.Adapter<ProyectoAdapter.Proyec
 
         holder.tvNombre.setText(proyecto.getNombre());
         holder.tvCodigo.setText(proyecto.getCodigo());
-        holder.tvEfectivoEntregado.setText(String.valueOf(proyecto.getEfectivoEntregado()));
-        holder.tvLiquidacion.setText(String.valueOf(proyecto.getLiquidacion()));
+        holder.tvEfectivoEntregado.setText(String.format("%.2f €", proyecto.getEfectivoEntregado()));
+        holder.tvLiquidacion.setText(String.format("%.2f €", proyecto.getLiquidacion()));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Obtener el proyecto seleccionado
+                Proyecto proyectoSeleccionado = proyectos.get(position);
+
+                // Crear el intent para ir a la DepartamentoActivity
+                Intent intent = new Intent(context, DepartamentoActivity.class);
+                intent.putExtra("proyecto", proyectoSeleccionado);
+
+                // Iniciar la DepartamentoActivity
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

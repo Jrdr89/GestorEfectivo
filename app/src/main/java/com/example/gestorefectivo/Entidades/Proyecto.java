@@ -1,8 +1,9 @@
 package com.example.gestorefectivo.Entidades;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Proyecto {
+public class Proyecto implements Serializable {
     String nombre;
     String codigo;
     List<Departamento> departamentos;

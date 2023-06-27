@@ -1,8 +1,9 @@
 package com.example.gestorefectivo.Entidades;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Registro {
+public class Registro implements Serializable {
 
         private String razonSocial;
         private String tipoDoc;

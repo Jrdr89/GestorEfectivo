@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Gestor Efectivo</string>
+
+    //Departamentos
+
+    <string name="Departamento1">Maquillaje y Peluquería</string>
+    <string name="Departamento2">Vestuario</string>
+    <string name="Departamento3">Departamento de Arte</string>
+    <string name="Departamento4">Departamento de Cámara, Maquinista y Luz</string>
+    <string name="Departamento5">Sonido</string>
+    <string name="Departamento6">Home Economist y Especialista de Producto</string>
+    <string name="Departamento7">Animales de escena</string>
+    <string name="Departamento8">Técnicos de Vehículo</string>
+    <string name="Departamento9">Cámara-Car y Vehículo con brazo articulado</string>
+    <string name="Departamento10">Técnicos de Efectos Especiales</string>
+
 </resources>

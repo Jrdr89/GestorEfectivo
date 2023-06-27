@@ -1,0 +1,367 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Incluimos el diseño del toolbar -->
+    <include layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"/>
+
+    <!-- Primera sección -->
+    <LinearLayout
+        android:id="@+id/linearLayoutDepartamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- Pulsadores de Departamentos -->
+        <RadioGroup
+            android:id="@+id/radioGroupDepartamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Departamento 1 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento1" />
+
+            <!-- Departamento 2 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento2"/>
+
+            <!-- Departamento 3 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento3"/>
+
+            <!-- Departamento 4 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento4"/>
+
+            <!-- Departamento 5 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento5"/>
+
+            <!-- Departamento 6 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento6"/>
+
+            <!-- Departamento 7 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento7"/>
+
+            <!-- Departamento 8 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento8"/>
+
+            <!-- Departamento 9 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento9"/>
+
+            <!-- Departamento 10 -->
+            <RadioButton
+                android:id="@+id/radioButtonDepartamento10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Departamento10"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+    <!-- Segunda sección -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_toEndOf="@id/linearLayoutDepartamentos"
+        android:orientation="horizontal">
+
+        <!-- Pulsadores de Tipo de Documento -->
+        <RadioGroup
+            android:id="@+id/radioGroupTipoDocumento"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Tipo de Documento 1 - FACTURA -->
+            <RadioButton
+                android:id="@+id/radioButtonTipoDocumento1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="FACTURA" />
+
+            <!-- Tipo de Documento 2 - TICKET -->
+            <RadioButton
+                android:id="@+id/radioButtonTipoDocumento2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="TICKET" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- Tercera sección -->
+    <LinearLayout
+        android:id="@+id/layoutSeccion3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/linearLayoutDepartamentos"
+        android:orientation="vertical">
+
+        <!-- TextView con el departamento seleccionado -->
+        <TextView
+            android:id="@+id/textViewDepartamentoSeleccionado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- TextView con el tipo de documento seleccionado -->
+        <TextView
+            android:id="@+id/textViewTipoDocumentoSeleccionado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- EditText - Razón Social -->
+        <EditText
+            android:id="@+id/editTextRazonSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Razón Social"
+            android:minHeight="48dp" />
+
+        <!-- Base Imponible -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Base Imponible: " />
+
+            <EditText
+                android:id="@+id/editTextBaseImponible"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="0.00"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <!-- Separación -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <!-- Porcentaje de IVA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Porcentaje IVA: " />
+
+            <Spinner
+                android:id="@+id/spinnerPorcentajeIVA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <!-- Porcentaje de Retención -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Porcentaje de Retención: " />
+
+            <Spinner
+                android:id="@+id/spinnerPorcentajeRetencion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <!-- Separación -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <!-- Cuota de IVA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuota de IVA: " />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textViewCuotaIva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Cuota de Retención -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuota de Retención: " />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textViewCuotaRetencion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Total -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: " />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textViewTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ImageView para capturar/escanear elementos -->
+        <ImageView
+            android:id="@+id/imageViewCapture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+
+        <!-- Botón Grabar -->
+        <Button
+            android:id="@+id/buttonGrabar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Grabar" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
