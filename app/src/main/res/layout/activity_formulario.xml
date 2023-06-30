@@ -373,11 +373,30 @@
         </LinearLayout>
 
         <!-- ImageView para capturar/escanear elementos -->
-        <ImageView
-            android:id="@+id/imageViewCapture"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewCapture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/camera"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/imageViewFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+
 
 
         <!-- Botón Grabar -->

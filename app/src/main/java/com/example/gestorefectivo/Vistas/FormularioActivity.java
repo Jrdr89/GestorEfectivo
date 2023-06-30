@@ -31,13 +31,14 @@ public class FormularioActivity extends AppCompatActivity {
     private EditText editTextBaseImponible;
     private TextView tvDepartamentoSeleccionado,tvTipoSeleccionado, textViewTotal,textViewCuotaIva
             ,textViewCuotaret;
-
     private boolean isDepartamentosVisible = false;
-
     private Spinner spinnerPorcentajeRet,spinnerPorcentajeIva;
     private HashMap<String, Float> porcentajesRetencion = new HashMap<>();
-
     private HashMap<String, Float> porcentajesIva = new HashMap<>();
+
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private ImageView imageButtonCapture;
+    private ImageView imageViewThumbnail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +47,12 @@ public class FormularioActivity extends AppCompatActivity {
         //Obtener referencias del toolbar
         ImageView icono_atras = findViewById(R.id.icono_atras);
         ImageView ivAdd = findViewById(R.id.ivAdd);
-        icono_atras.setVisibility(View.INVISIBLE);
+        ImageView icono_menu = findViewById(R.id.icono_menu);
+        TextView titulo = findViewById(R.id.titulo);
+
+        icono_menu.setVisibility(View.INVISIBLE);
         ivAdd.setVisibility(View.INVISIBLE);
+        titulo.setText("Elegir  departamento");
 
         //Obtener referencias RadioGroups
         rgDepartamentos = findViewById(R.id.radioGroupDepartamentos);
@@ -63,8 +68,8 @@ public class FormularioActivity extends AppCompatActivity {
         mostrarDepartamentos = findViewById(R.id.mostrarDep);
 
         //Obtener referencias de los spinners
-       spinnerPorcentajeRet = findViewById(R.id.spinnerPorcentajeRetencion);
-       spinnerPorcentajeIva = findViewById(R.id.spinnerPorcentajeIVA);
+        spinnerPorcentajeRet = findViewById(R.id.spinnerPorcentajeRetencion);
+        spinnerPorcentajeIva = findViewById(R.id.spinnerPorcentajeIVA);
 
         //Evento para llenar el hasmap de spinners
         llenarSpinners();
@@ -75,7 +80,6 @@ public class FormularioActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterRetencion = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, porcentajesRetencionList);
         adapterRetencion.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-
         ArrayList<String>  porcentajesIvaList = new ArrayList<>(porcentajesIva.keySet());
         Collections.sort(porcentajesIvaList);
         ArrayAdapter<String> adapterIva = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, porcentajesIvaList);
@@ -84,12 +88,16 @@ public class FormularioActivity extends AppCompatActivity {
         spinnerPorcentajeRet.setAdapter(adapterRetencion);
         spinnerPorcentajeIva.setAdapter(adapterIva);
 
-
         //Obtener refencia de los Text -Base Imponible -Cuota Iva - Cuota retencion
         editTextBaseImponible = findViewById(R.id.editTextBaseImponible);
         textViewTotal = findViewById(R.id.textViewTotal);
         textViewCuotaIva =findViewById(R.id.textViewCuotaIva);
         textViewCuotaret = findViewById(R.id.textViewCuotaRetencion);
+
+
+        //Obtener referencias para usar camara
+        imageButtonCapture = findViewById(R.id.imageViewCapture);
+        imageViewThumbnail = findViewById(R.id.imageViewEntrega);
 
         mostrarDepartamentos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -191,6 +199,13 @@ public class FormularioActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
                 // No se necesita realizar ninguna acción si no se selecciona nada
+            }
+        });
+
+        icono_atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

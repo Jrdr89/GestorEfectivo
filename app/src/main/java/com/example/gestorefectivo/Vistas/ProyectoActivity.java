@@ -3,6 +3,8 @@ package com.example.gestorefectivo.Vistas;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,6 +27,12 @@ public class ProyectoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proyecto);
+        //Obtener referencias del toolbar
+        ImageView icono_atras = findViewById(R.id.icono_atras);
+        ImageView ivAdd = findViewById(R.id.ivAdd);
+        ImageView icono_menu = findViewById(R.id.icono_menu);
+        TextView titulo = findViewById(R.id.titulo);
+        titulo.setText("Proyectos Activos");
 
         ImageButton mostrarDepartamentos = findViewById(R.id.mostrarDep);
 
