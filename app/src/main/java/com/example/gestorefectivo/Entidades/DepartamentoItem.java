@@ -3,17 +3,17 @@ package com.example.gestorefectivo.Entidades;
 import java.io.Serializable;
 import java.util.List;
 
-public class Departamento implements Serializable {
+public class DepartamentoItem implements Serializable {
 
     String nombre;
-    List<Registro> registros;
+    List<RegistroItem> registros;
 
     //Constructores
 
-    public Departamento() {
+    public DepartamentoItem() {
     }
 
-    public Departamento(String nombre, List<Registro> registros) {
+    public DepartamentoItem(String nombre, List<RegistroItem> registros) {
         this.nombre = nombre;
         this.registros = registros;
     }
@@ -29,17 +29,17 @@ public class Departamento implements Serializable {
         this.nombre = nombre;
     }
 
-    public List<Registro> getRegistros() {
+    public List<RegistroItem> getRegistros() {
         return registros;
     }
 
-    public void setRegistros(List<Registro> registros) {
+    public void setRegistros(List<RegistroItem> registros) {
         this.registros = registros;
     }
 
     public double getSumatorioRegistros() {
         double sumatorio = 0;
-        for (Registro registro : registros) {
+        for (RegistroItem registro : registros) {
             sumatorio += registro.getTotalRegistro();
         }
         return sumatorio;

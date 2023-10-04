@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Gestor Efectivo</string>
 
+    //Texto botones
+    <string name="Aceptar">ACEPTAR</string>
+    <string name="Cancelar">CANCELAR</string>
+
+    //textos formularios
+    <string name="nombre_proyecto">Nombre del proyecto</string>
+    <string name="codigo_proyecto">Codigo del proyecto</string>
+    <string name="efectivo_entregado">Efectivo entregado</string>
+
     //Departamentos
 
     <string name="Departamento1">Maquillaje y Peluquería</string>
@@ -13,7 +22,6 @@
     <string name="Departamento8">Técnicos de Vehículo</string>
     <string name="Departamento9">Cámara-Car y Vehículo con brazo articulado</string>
     <string name="Departamento10">Técnicos de Efectos Especiales</string>
-
 
 
     //porcentajes Retencion
@@ -31,5 +39,18 @@
         <item>10%</item>
         <item>21%</item>
     </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_user">Usuario</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="new_user">Nuevo usuario</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

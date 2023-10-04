@@ -1,8 +1,8 @@
 package com.example.gestorefectivo.Vistas;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import static android.content.Intent.getIntent;
+
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,12 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.gestorefectivo.Entidades.Departamento;
-import com.example.gestorefectivo.Entidades.Proyecto;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.gestorefectivo.Entidades.DepartamentoItem;
+import com.example.gestorefectivo.Entidades.ProyectoItem;
 import com.example.gestorefectivo.R;
 import com.example.gestorefectivo.VistaModelo.Adapters.DepartamentoAdapter;
 
@@ -33,10 +37,10 @@ public class DepartamentoActivity extends AppCompatActivity {
         mostrarDepartamentos.setVisibility(View.INVISIBLE);
 
         // Obtener el objeto Proyecto del intent
-        Proyecto proyecto = (Proyecto) getIntent().getSerializableExtra("proyecto");
+        ProyectoItem proyecto = (ProyectoItem) getIntent().getSerializableExtra("proyecto");
 
         // Obtener la lista de departamentos del objeto Proyecto
-        List<Departamento> departamentos = proyecto.getDepartamentos();
+        List<DepartamentoItem> departamentos = proyecto.getDepartamentos();
 
         // Configurar el RecyclerView
         recyclerView = findViewById(R.id.recyclerView);

@@ -20,11 +20,11 @@ public class GeneradorDatos {
             "Técnicos de Efectos Especiales"
     };
 
-    public static List<Proyecto> generarProyectos() {
-        List<Proyecto> proyectos = new ArrayList<>();
+    public static List<ProyectoItem> generarProyectos() {
+        List<ProyectoItem> proyectos = new ArrayList<>();
 
         for (int i = 1; i <= 3; i++) {
-            Proyecto proyecto = new Proyecto();
+            ProyectoItem proyecto = new ProyectoItem();
             proyecto.setNombre("Proyecto " + i);
             proyecto.setCodigo("COD" + i);
             proyecto.setDepartamentos(generarDepartamentos());
@@ -37,11 +37,11 @@ public class GeneradorDatos {
         return proyectos;
     }
 
-    private static List<Departamento> generarDepartamentos() {
-        List<Departamento> departamentos = new ArrayList<>();
+    private static List<DepartamentoItem> generarDepartamentos() {
+        List<DepartamentoItem> departamentos = new ArrayList<>();
 
         for (String nombre : DEPARTAMENTOS) {
-            Departamento departamento = new Departamento();
+            DepartamentoItem departamento = new DepartamentoItem();
             departamento.setNombre(nombre);
             departamento.setRegistros(generarRegistros(10));
 
@@ -51,11 +51,11 @@ public class GeneradorDatos {
         return departamentos;
     }
 
-    private static List<Registro> generarRegistros(int cantidad) {
-        List<Registro> registros = new ArrayList<>();
+    private static List<RegistroItem> generarRegistros(int cantidad) {
+        List<RegistroItem> registros = new ArrayList<>();
 
         for (int i = 1; i <= cantidad; i++) {
-            Registro registro = new Registro();
+            RegistroItem registro = new RegistroItem();
             registro.setRazonSocial("Razón Social " + i);
             registro.setTipoDoc("Tipo de Documento " + i);
             registro.setBaseImponible(generarNumeroAleatorio(100, 1000));

@@ -3,25 +3,25 @@ package com.example.gestorefectivo.Entidades;
 import java.io.Serializable;
 import java.util.List;
 
-public class Proyecto implements Serializable {
+public class ProyectoItem implements Serializable {
     String nombre;
     String codigo;
-    List<Departamento> departamentos;
+    List<DepartamentoItem> departamentos;
     Double efectivoEntregado;
     Double liquidacion;
 
 
     //Constructores
 
-    public Proyecto() {
+    public ProyectoItem() {
     }
 
-    public Proyecto(String nombre, String codigo) {
+    public ProyectoItem(String nombre, String codigo) {
         this.nombre = nombre;
         this.codigo = codigo;
     }
 
-    public Proyecto(String nombre, String codigo, List<Departamento> departamentos, Double efectivoEntregado, Double liquidacion) {
+    public ProyectoItem(String nombre, String codigo, List<DepartamentoItem> departamentos, Double efectivoEntregado, Double liquidacion) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.departamentos = departamentos;
@@ -48,11 +48,11 @@ public class Proyecto implements Serializable {
         this.codigo = codigo;
     }
 
-    public List<Departamento> getDepartamentos() {
+    public List<DepartamentoItem> getDepartamentos() {
         return departamentos;
     }
 
-    public void setDepartamentos(List<Departamento> departamentos) {
+    public void setDepartamentos(List<DepartamentoItem> departamentos) {
         this.departamentos = departamentos;
     }
 

@@ -11,20 +11,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gestorefectivo.Entidades.Departamento;
-import com.example.gestorefectivo.Entidades.Proyecto;
+import com.example.gestorefectivo.Entidades.DepartamentoItem;
 import com.example.gestorefectivo.R;
-import com.example.gestorefectivo.Vistas.DepartamentoActivity;
 import com.example.gestorefectivo.Vistas.RegistroActivity;
 
 import java.util.List;
 
 public class DepartamentoAdapter extends RecyclerView.Adapter<DepartamentoAdapter.DepartamentoViewHolder> {
 
-    private List<Departamento> departamentos;
+    private List<DepartamentoItem> departamentos;
     private Context context;
 
-    public DepartamentoAdapter(List<Departamento> departamentos, Context context) {
+    public DepartamentoAdapter(List<DepartamentoItem> departamentos, Context context) {
         this.departamentos = departamentos;
         this.context = context;
     }
@@ -38,7 +36,7 @@ public class DepartamentoAdapter extends RecyclerView.Adapter<DepartamentoAdapte
 
     @Override
     public void onBindViewHolder(@NonNull DepartamentoViewHolder holder, int position) {
-        Departamento departamento = departamentos.get(position);
+        DepartamentoItem departamento = departamentos.get(position);
 
         holder.ivDepartamento.setImageResource(R.drawable.departamentos);
         holder.tvNombreDepartamento.setText(departamento.getNombre());
@@ -48,7 +46,7 @@ public class DepartamentoAdapter extends RecyclerView.Adapter<DepartamentoAdapte
             @Override
             public void onClick(View view) {
                 // Obtener el proyecto seleccionado
-                Departamento departamentoSeleccionado = departamentos.get(position);
+                DepartamentoItem departamentoSeleccionado = departamentos.get(position);
 
                 // Crear el intent para ir a la DepartamentoActivity
                 Intent intent = new Intent(context, RegistroActivity.class);

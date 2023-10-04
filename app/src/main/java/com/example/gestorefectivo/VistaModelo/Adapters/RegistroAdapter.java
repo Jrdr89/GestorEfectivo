@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gestorefectivo.Entidades.Registro;
+import com.example.gestorefectivo.Entidades.RegistroItem;
 import com.example.gestorefectivo.R;
 
 import java.text.SimpleDateFormat;
@@ -18,9 +18,9 @@ import java.util.List;
 import java.util.Locale;
 
 public class RegistroAdapter extends RecyclerView.Adapter<RegistroAdapter.RegistroViewHolder> {
-    private List<Registro> registros;
+    private List<RegistroItem> registros;
 
-    public RegistroAdapter(List<Registro> registros) {
+    public RegistroAdapter(List<RegistroItem> registros) {
         this.registros = registros;
     }
 
@@ -33,7 +33,7 @@ public class RegistroAdapter extends RecyclerView.Adapter<RegistroAdapter.Regist
 
     @Override
     public void onBindViewHolder(@NonNull RegistroViewHolder holder, int position) {
-        Registro registro = registros.get(position);
+        RegistroItem registro = registros.get(position);
 
 /*        holder.imageView.setImageResource(R.drawable.imagenUrl);*/
         holder.tvTipoDoc.setText(registro.getTipoDoc());

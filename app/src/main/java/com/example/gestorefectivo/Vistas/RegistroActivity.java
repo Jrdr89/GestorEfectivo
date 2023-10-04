@@ -9,10 +9,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.gestorefectivo.Entidades.Departamento;
-import com.example.gestorefectivo.Entidades.Registro;
+import com.example.gestorefectivo.Entidades.DepartamentoItem;
+import com.example.gestorefectivo.Entidades.RegistroItem;
 import com.example.gestorefectivo.R;
-import com.example.gestorefectivo.VistaModelo.Adapters.DepartamentoAdapter;
 import com.example.gestorefectivo.VistaModelo.Adapters.RegistroAdapter;
 
 import java.util.List;
@@ -31,10 +30,10 @@ public class RegistroActivity extends AppCompatActivity {
 
         mostrarDepartamentos.setVisibility(View.INVISIBLE);
         // Obtener el objeto Departamento del Intent
-        Departamento departamento = (Departamento) getIntent().getSerializableExtra("departamento");
+        DepartamentoItem departamento = (DepartamentoItem) getIntent().getSerializableExtra("departamento");
 
         // Obtener la list de registros del departamento
-        List<Registro> registros = departamento.getRegistros();
+        List<RegistroItem> registros = departamento.getRegistros();
 
         // Inicializar RecyclerView
         recyclerView = findViewById(R.id.recyclerView);

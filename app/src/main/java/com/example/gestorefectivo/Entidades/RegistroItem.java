@@ -3,7 +3,7 @@ package com.example.gestorefectivo.Entidades;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Registro implements Serializable {
+public class RegistroItem implements Serializable {
 
         private String razonSocial;
         private String tipoDoc;
@@ -18,11 +18,11 @@ public class Registro implements Serializable {
 
         // Constructor
 
-    public Registro() {
+    public RegistroItem() {
     }
 
-    public Registro(String razonSocial, String tipoDoc, double baseImponible, double porcentajeIva, double quotaIVA, double porcentajeRetencion,
-                    double quotaRetencion, String imagenUrl, Date fecha, double totalRegistro) {
+    public RegistroItem(String razonSocial, String tipoDoc, double baseImponible, double porcentajeIva, double quotaIVA, double porcentajeRetencion,
+                        double quotaRetencion, String imagenUrl, Date fecha, double totalRegistro) {
         this.razonSocial = razonSocial;
         this.tipoDoc = tipoDoc;
         this.baseImponible = baseImponible;

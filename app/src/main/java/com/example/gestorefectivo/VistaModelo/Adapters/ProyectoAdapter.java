@@ -8,20 +8,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gestorefectivo.Entidades.Proyecto;
+import com.example.gestorefectivo.Entidades.ProyectoItem;
 import com.example.gestorefectivo.R;
 import com.example.gestorefectivo.Vistas.DepartamentoActivity;
 
 import java.util.List;
 
 public class ProyectoAdapter extends RecyclerView.Adapter<ProyectoAdapter.ProyectoViewHolder> {
-    private List<Proyecto> proyectos;
+    private List<ProyectoItem> proyectos;
     private Context context;
 
-    public ProyectoAdapter(List<Proyecto> proyectos, Context context) {
+    public ProyectoAdapter(List<ProyectoItem> proyectos, Context context) {
         this.proyectos = proyectos;
         this.context = context;
     }
@@ -35,7 +34,7 @@ public class ProyectoAdapter extends RecyclerView.Adapter<ProyectoAdapter.Proyec
 
     @Override
     public void onBindViewHolder(@NonNull ProyectoViewHolder holder, int position) {
-        Proyecto proyecto = proyectos.get(position);
+        ProyectoItem proyecto = proyectos.get(position);
 
         holder.tvNombre.setText(proyecto.getNombre());
         holder.tvCodigo.setText(proyecto.getCodigo());
@@ -46,7 +45,7 @@ public class ProyectoAdapter extends RecyclerView.Adapter<ProyectoAdapter.Proyec
             @Override
             public void onClick(View view) {
                 // Obtener el proyecto seleccionado
-                Proyecto proyectoSeleccionado = proyectos.get(position);
+                ProyectoItem proyectoSeleccionado = proyectos.get(position);
 
                 // Crear el intent para ir a la DepartamentoActivity
                 Intent intent = new Intent(context, DepartamentoActivity.class);
